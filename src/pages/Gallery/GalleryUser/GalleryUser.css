@@ -1,0 +1,6 @@
+.makeups-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* This creates a grid with three equal columns */
+    gap: 16px; /* This adds some spacing between the items */
+    padding: 16px; /* Optional: This adds some padding around the grid */
+}   

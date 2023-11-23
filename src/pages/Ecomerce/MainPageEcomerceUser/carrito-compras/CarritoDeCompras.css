@@ -1,0 +1,128 @@
+/* CarritoDeCompras.css */
+
+/* Estilos generales */
+.carrito-general {
+	background-color: var(--color-piel);
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+}
+.carrito-container {
+	background-color: var(--color-piel);
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}
+
+.tabla-carrito {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	font-size: 25px;
+}
+
+.tabla-carrito th,
+.tabla-carrito td {
+	padding: 8px;
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+}
+
+.tabla-carrito th {
+	background-color: var(--color-piel);
+	color: black;
+}
+
+.tabla-carrito td {
+	color: white;
+	background-color: var(--color-morado-oscuro);
+	border-bottom: 10px solid var(--color-piel); /* Cambiado para separar filas */
+}
+
+.tabla-carrito img {
+	max-width: 100px;
+	border-radius: 15px;
+}
+
+.total-general {
+	margin-top: 20px;
+	display: flex;
+	justify-content: flex-end;
+	font-weight: thin;
+}
+
+/* Estilos para el botón de eliminar */
+.borrar-producto {
+	background-color: var(--color-piel);
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+td.borrar-producto {
+	background-color: var(--color-piel);
+}
+
+.borrar-producto button {
+	background-color: transparent;
+	border: none;
+	border-radius: 0px;
+	cursor: pointer;
+	padding: 0; /* Elimina el relleno para hacer que el botón sea más limpio */
+}
+
+.borrar-producto img {
+	background-color: var(--color-piel);
+	border-radius: 0%;
+}
+
+/* Estilos para la casilla de cantidad y total */
+.total-tabla {
+	border-radius: 15px;
+}
+
+.tabla-carrito td.total-casilla {
+	background-color: var(--color-morado-oscuro);
+	border-radius: 0 20px 20px 0;
+}
+
+.tabla-carrito td.casilla-producto {
+	background-color: var(--color-morado-oscuro);
+	border-radius: 20px 0px 0px 20px;
+}
+
+/*Footer acomodado*/
+.footer-carrito {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: var(--color-moradito);
+}
+
+/*Boton REalizar Compra*/
+.realizar-compra button {
+	background-color: var(--color-morado-oscuro);
+	color: white;
+	border: none;
+	border-radius: 10px;
+	padding: 10px 20px;
+	cursor: pointer;
+	font-family: 'Playfair Display', serif;
+	font-size: 24px;
+	margin-bottom: 0%;
+}
+.realizar-compra p {
+	background-color: var(
+		--color-morado-oscuro
+	); /* Fondo de color morado oscuro */
+	color: white; /* Color de texto blanco */
+	font-family: 'Playfair Display', serif; /* Fuente de texto */
+	border-radius: 15px; /* Bordes redondeados */
+	padding: 10px 20px; /* Espaciado interno */
+	cursor: pointer;
+	border: none; /* Elimina el borde */
+	font-size: 24px;
+	margin-top: 10px;
+}

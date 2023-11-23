@@ -1,0 +1,52 @@
+/* typography.css */
+@import './colors.css';
+
+/* Estilos para títulos */
+h1 {
+	font-family: 'Playfair Display', serif;
+	font-size: 80px;
+	color: var(--color-morado-oscuro);
+	margin-bottom: 20px;
+	font-weight: lighter;
+}
+
+h2 {
+	font-weight: lighter;
+	font-family: 'Playfair Display', serif;
+	font-size: 48px;
+	color: var(--color-blanco);
+	margin-bottom: 15px;
+}
+
+h3 {
+	font-weight: lighter;
+
+	font-family: 'Playfair Display', serif;
+	font-size: 48px;
+	color: var(--color-morado-oscuro);
+	margin-bottom: 10px;
+}
+
+/* Estilos para párrafos */
+p {
+	font-family: 'Playfair Display', serif;
+	font-size: 32px;
+	line-height: 1.5;
+	color: var(--color-negro);
+	margin-bottom: 15px;
+}
+
+/* Estilos para enlaces */
+a {
+	font-family: 'Playfair Display', serif;
+	font-size: 32px;
+	text-decoration: none;
+	color: var(
+		--color-moradito
+	); /* Puedes utilizar el color moradito definido en tu archivo de colores */
+	cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+}
+
+a:hover {
+	text-decoration: underline;
+}

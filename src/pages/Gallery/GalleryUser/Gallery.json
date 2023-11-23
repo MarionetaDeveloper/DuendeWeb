@@ -1,0 +1,67 @@
+[
+	{
+		"titulo": "Paisaje Montañoso",
+		"descripcion": "Un hermoso paisaje montañoso con una vista panorámica de majestuosas montañas y un cielo despejado.",
+		"categoria": "Naturaleza",
+		"subcategoria": "Montañas",
+		"etiquetas": [
+			"#paisaje",
+			"#naturaleza",
+			"#montañas"
+		],
+		"fecha": "2023-09-15",
+		"imagen": "https://ejemplo.com/imagen1.jpg"
+	},
+	{
+		"titulo": "Retrato de Mujer",
+		"descripcion": "Un retrato artístico de una mujer que refleja su belleza y expresión con detalles excepcionales.",
+		"categoria": "Retratos",
+		"subcategoria": "Retrato Artístico",
+		"etiquetas": [
+			"#retrato",
+			"#arte",
+			"#mujer"
+		],
+		"fecha": "2023-08-28",
+		"imagen": "https://ejemplo.com/imagen2.jpg"
+	},
+	{
+		"titulo": "Abstracto en Azul",
+		"descripcion": "Una obra de arte abstracto en tonos azules que evoca una sensación de calma y serenidad.",
+		"categoria": "Arte Abstracto",
+		"subcategoria": "Pintura",
+		"etiquetas": [
+			"#abstracto",
+			"#arte",
+			"#azul"
+		],
+		"fecha": "2023-07-10",
+		"imagen": "https://ejemplo.com/imagen3.jpg"
+	},
+	{
+		"titulo": "Ciudad Nocturna",
+		"descripcion": "Una fotografía urbana de una ciudad iluminada por la noche, creando un ambiente vibrante y dinámico.",
+		"categoria": "Ciudades",
+		"subcategoria": "Fotografía Urbana",
+		"etiquetas": [
+			"#ciudad",
+			"#noche",
+			"#urbano"
+		],
+		"fecha": "2023-06-22",
+		"imagen": "https://ejemplo.com/imagen4.jpg"
+	},
+	{
+		"titulo": "Bodegón de Frutas",
+		"descripcion": "Una pintura al óleo de un bodegón clásico que destaca la belleza de las frutas y la riqueza de los detalles.",
+		"categoria": "Arte Clásico",
+		"subcategoria": "Pintura al Óleo",
+		"etiquetas": [
+			"#bodegón",
+			"#arte",
+			"#frutas"
+		],
+		"fecha": "2023-05-05",
+		"imagen": "https://ejemplo.com/imagen5.jpg"
+	}
+]

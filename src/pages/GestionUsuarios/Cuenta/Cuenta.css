@@ -1,0 +1,58 @@
+/* styles.css */
+.configuracion-usuario {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--color-piel);
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+}
+.configuracion-usuario button {
+	margin-bottom: 20vh;
+}
+.cuenta-opciones {
+	background-color: var(
+		--color-moradito
+	); /* Cambia el color de fondo a morado */
+	color: white; /* Cambia el color del texto a blanco */
+	display: flex;
+	width: 100%;
+	margin: 0;
+	padding: 20px;
+}
+
+.lado-izq-cuenta,
+.lado-der-contrasena {
+	flex: 1;
+	padding: 10px;
+}
+.lado-izq-cuenta input,
+.lado-der-contrasena input {
+	flex: 1;
+	display: flex;
+	width: 40vh;
+	margin-left: 20px;
+	outline: none;
+	font-family: 'Playfair Display', serif;
+}
+.lado-izq-cuenta label,
+.lado-der-contrasena label {
+	width: 40vh;
+	margin-left: 20px;
+	font-family: 'Playfair Display', serif;
+}
+
+.lado-izq-cuenta h3,
+.lado-der-contrasena h3 {
+	margin-bottom: 60px;
+	color: white;
+}
+.botonetes {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.botonetes button {
+	margin: 10px;
+}

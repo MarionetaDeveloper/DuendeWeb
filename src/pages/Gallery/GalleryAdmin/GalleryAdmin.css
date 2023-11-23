@@ -1,0 +1,12 @@
+.search-bar {
+	background-color: gainsboro;
+	outline: none;
+	border: none;
+	border-radius: 20px;
+	font-size: 25px;
+	font-family: 'Playfair Display', serif;
+	width: 200px; /* Ajusta el ancho según tus preferencias */
+	position: absolute;
+	top: 18.8vh; /* Ajusta la distancia desde la parte superior según tus preferencias */
+	right: 10px; /* Ajusta la distancia desde la derecha según tus preferencias */
+}

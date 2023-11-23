@@ -1,0 +1,132 @@
+/* Estilos para el contenedor del Popup de Historial de Usuario */
+.popup-container-gallery {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1rem;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+/* Estilos para el contenido del Popup de Historial de Usuario */
+.popup-content-gallery {
+	position: relative;
+	width: 100%;
+	max-width: 1500px;
+	height: 100%;
+	max-height: 800px;
+	background-color: var(--color-morado-oscuro);
+	border-radius: 10px;
+	padding: 1rem;
+	display: flex;
+	flex-direction: row;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: relative; /* Agregamos posicion relativa */
+	padding: 0;
+}
+
+/* Estilos para el lado izquierdo del Popup */
+.left-side-popup {
+	width: 50%;
+	display: flex;
+	align-items: left;
+	justify-content: top;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+/* Estilos para la imagen en el lado izquierdo, si es necesario */
+.left-side-popup-gallery img {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.left-side-popup p {
+	font-size: 20px;
+	color: white;
+}
+
+/* Estilos para el lado derecho del Popup */
+.right-side-popup {
+	width: 60%;
+	padding: 20px;
+	color: white;
+}
+
+.right-side-popup h3 {
+	color: white;
+	font-size: 35px;
+	font-family: 'Playfair Display', serif; /* Fuente de texto */
+}
+
+.right-side-popup p {
+	font-size: 20px;
+	color: white;
+}
+
+.titulo-maquillaje-container {
+	align-items: center;
+	display: flex;
+	align-content: center;
+	padding: 0%;
+}
+
+.right-side-popup .titulo-maquillaje {
+	font-size: 60px;
+	font-weight: bold;
+}
+
+.right-side-popup .Descripcion-maquillaje {
+	font-size: 25px;
+}
+.right-side-popup .texto-pequenno-pop-up {
+	font-size: 15px;
+}
+.mensaje-duende {
+	display: flex;
+	flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Centra horizontalmente */
+	justify-content: center; /* Centra verticalmente */
+	text-align: center; /* Alinea el texto al centro */
+}
+
+.mensaje-duende .input-correo-telefono {
+	display: flex;
+	flex: row;
+}
+
+.mensaje-duende .input-correo-telefono input {
+	width: 25vh;
+}
+/* Estilos para los inputs */
+.mensaje-duende input,
+textarea {
+	margin: 10px 0;
+	border: 1px solid #ccc; /* Borde ligero */
+	border-radius: 25px; /* Esquinas redondeadas en los inputs */
+	width: 80%;
+	margin: 5px;
+	height: 50px;
+	height: 2.5vh;
+	border-radius: 15px;
+	background-color: white; /* Fondo de color piel */
+	font-family: 'Playfair Display', serif; /* Fuente de texto */
+	font-weight: bold; /* Texto en negrita */
+	outline: none;
+}
+.mensaje-duende textarea {
+	height: 100px;
+}

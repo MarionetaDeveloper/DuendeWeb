@@ -1,0 +1,26 @@
+/* InputText.style.css */
+
+.form-login input {
+	width: 80%; /* Ancho completo del contenedor */
+	height: 30px;
+	background-color: white; /* Fondo blanco */
+	border: none; /* Sin borde */
+	border-radius: 15px; /* Esquinas redondeadas */
+	padding: 10px; /* Espaciado interno */
+	margin-bottom: 0px; /* Espaciado inferior entre los campos */
+}
+.form-login label {
+	font-family: 'Playfair Display', serif; /* Asegúrate de especificar la fuente deseada */
+
+	color: var(--color-blanco);
+	font-size: 24px;
+}
+.form-login {
+	text-align: left;
+	margin-left: 30px;
+}
+
+.subtitulo-logins {
+	color: var(--color-blanco);
+	font-size: 24px;
+}

@@ -1,0 +1,8 @@
+@import './Assets/colors.css';
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Playfair Display', serif; /* Asegúrate de especificar la fuente deseada */
+	background-color: #d9c9ca;
+}

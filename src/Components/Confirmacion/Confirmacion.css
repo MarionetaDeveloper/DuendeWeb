@@ -1,0 +1,68 @@
+/* Confirmacion.css */
+.confirmacion-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6); /* Fondo negro semi-transparente */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 999; /* Asegura que la confirmación esté en la parte superior */
+}
+
+.confirmacion-content {
+	background: var(--color-morado-oscuro);
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	text-align: center;
+	position: relative;
+	border: white solid 2px;
+	border-radius: 10px;
+}
+
+.mensaje {
+	font-size: 18px;
+	margin: 0;
+	padding: 10px 0;
+	color: white;
+}
+
+.botones {
+	margin-top: 20px;
+}
+
+.boton-aceptar,
+.boton-cancelar {
+	padding: 5px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	margin: 0 10px;
+}
+
+.boton-aceptar {
+	background-color: var(--color-morado-oscuro);
+	color: #fff;
+	border: white solid 2px;
+	border-radius: 5px;
+	font-family: 'Playfair Display', serif; /* Asegúrate de especificar la fuente deseada */
+	font-size: 20px;
+}
+
+.boton-cancelar {
+	background-color: var(--color-morado-oscuro);
+	color: #fff;
+	border: white solid 2px;
+	border-radius: 5px;
+	font-family: 'Playfair Display', serif; /* Asegúrate de especificar la fuente deseada */
+	font-size: 20px;
+}
+
+.boton-aceptar:hover {
+	background: #218838; /* Cambia el color al pasar el ratón sobre el botón "Aceptar" */
+}
+
+.boton-cancelar:hover {
+	background: #c82333; /* Cambia el color al pasar el ratón sobre el botón "Cancelar" */
+}

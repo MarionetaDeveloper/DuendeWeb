@@ -1,0 +1,134 @@
+.container-finalizar-compra {
+	background-color: var(--color-piel);
+	display: flex;
+	flex-direction: column;
+}
+
+.contenedor-arriba {
+	display: flex;
+}
+.lado-provincias {
+	align-items: center;
+
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+.lado-inputs {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+.lado-inputs input {
+	width: 70%;
+	height: 60px;
+	border-radius: 15px;
+	margin-left: 5%;
+	background-color: var(--color-piel); /* Fondo de color piel */
+	font-family: 'Playfair Display', serif; /* Fuente de texto */
+	font-weight: bold; /* Texto en negrita */
+	border: 3px solid var(--color-morado-oscuro); /* Borde de 3px de color morado oscuro */
+	padding: 8px; /* Espaciado interno */
+	margin-bottom: 30px; /* Margen inferior */
+	outline: none;
+}
+.lado-inputs input::placeholder {
+	color: black;
+}
+
+/* Estilos para los campos de selección personalizados */
+.custom-select {
+	width: 70%;
+	height: 60px;
+	border-radius: 15px;
+	margin-left: 5%;
+	background-color: var(--color-piel); /* Fondo de color piel */
+	font-family: 'Playfair Display', serif; /* Fuente de texto */
+	font-weight: bold; /* Texto en negrita */
+	border: 3px solid var(--color-morado-oscuro); /* Borde de 3px de color morado oscuro */
+	padding: 8px; /* Espaciado interno */
+	margin-bottom: 50px; /* Margen inferior */
+	outline: none;
+}
+
+/* Estilo para el efecto de placeholder */
+.custom-select option[disabled] {
+	color: #999; /* Color del texto del placeholder */
+}
+
+/**Lado de abajo */
+.lado-abajo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.lado-abajo textarea {
+	width: 70%;
+	height: 200px;
+	border-radius: 15px;
+	margin-left: 5%;
+	background-color: var(--color-piel); /* Fondo de color piel */
+	font-family: 'Playfair Display', serif; /* Fuente de texto */
+	font-weight: bold; /* Texto en negrita */
+	border: 3px solid var(--color-morado-oscuro); /* Borde de 3px de color morado oscuro */
+	padding: 8px; /* Espaciado interno */
+	margin-bottom: 30px; /* Margen inferior */
+	outline: none;
+}
+.lado-abajo textarea::placeholder {
+	color: black;
+}
+
+/* Estilo base para el input de tipo file */
+.input-file {
+	display: none; /* Oculta el input real */
+}
+
+/* Estilo para el botón personalizado */
+.custom-file-input {
+	background-color: var(--color-morado-oscuro); /* Color de fondo del botón */
+	color: white; /* Color del texto en el botón */
+	padding: 10px 15px; /* Espaciado interno */
+	border: none; /* Quita el borde */
+	border-radius: 15px; /* Añade bordes redondeados */
+	cursor: pointer; /* Cambia el cursor al pasar el mouse */
+	font-family: 'Playfair Display', serif; /* Fuente de texto */
+	font-size: 25px;
+}
+
+/* Estilo para el texto que muestra el nombre del archivo seleccionado */
+.file-name {
+	margin-top: 10px; /* Espacio superior para separar el texto del botón */
+	font-weight: bold; /* Texto en negrita */
+}
+
+/* Cambia el estilo del botón al pasar el mouse */
+.custom-file-input:hover {
+	background-color: var(
+		--color-moradito
+	); /* Color de fondo más oscuro al pasar el mouse */
+}
+.lado-abajo div {
+	width: 100%;
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.lado-abajo button {
+	width: 20%;
+	height: 60px;
+	border-radius: 15px;
+	background-color: var(--color-morado-oscuro); /* Fondo de color piel */
+	font-family: 'Playfair Display', serif; /* Fuente de texto */
+	padding: 8px; /* Espaciado interno */
+	margin-bottom: 30px; /* Margen inferior */
+	outline: none;
+	color: white;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.lado-abajo button:hover {
+	background-color: var(--color-moradito);
+}

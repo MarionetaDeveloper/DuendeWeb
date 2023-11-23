@@ -1,0 +1,68 @@
+.bienvenida-section {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	height: 40vh;
+	display: flex;
+	align-items: center;
+	background-size: contain; /* Cambiado a 'contain' para ajustar sin estirar */
+	background-image: url('../../../Imagenes/antifaz.jpg');
+	background-color: var(--color-moradito);
+}
+
+.texto-Bienvenida p {
+	color: var(--color-blanco);
+	background-color: none;
+}
+
+.texto-Bienvenida a {
+	color: var(--color-blanco);
+	background-color: var(--color-moradito);
+	border-radius: 15px;
+	padding: 5px 40px;
+}
+
+.contenedor-bienvenida {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 60%;
+	height: 100%;
+	margin: 0 auto;
+}
+/*Secciñon de Modulos*/
+.contenedor-Modulos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-piel);
+	padding: 20px;
+}
+/*Seccion de Acerca de Nosotros*/
+.acerca-de-nosotros-section {
+	background-color: var(--color-piel);
+}
+
+.acerca-de-nosotros-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+.acerca-de-nosotros-content h2 {
+	color: black;
+	margin-bottom: 50px;
+	font-size: 80px;
+}
+.creadora-info {
+	display: flex;
+}
+.creadora-info p {
+	height: auto;
+	font-size: 50px;
+	justify-content: center;
+	align-items: center;
+}

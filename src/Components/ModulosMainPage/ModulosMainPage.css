@@ -1,0 +1,42 @@
+/* ModulosMainPage.css */
+
+.modulos-main-page {
+	display: block;
+	max-width: 45%;
+	margin: 2.5%;
+	border-radius: 15px;
+	padding: 20px;
+	background-color: var(--color-moradito); /* Color de fondo morado */
+	border-radius: 10px;
+	text-decoration: none; /* Quita el subrayado del enlace */
+	transition: transform 0.2s ease-in-out; /* Transición suave al pasar el ratón */
+	position: relative; /* Posición relativa para posicionar el logo */
+	margin-right: 0%;
+}
+
+.modulos-main-page:hover {
+	transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+	text-decoration: none;
+}
+
+.modulos-main-page-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.modulos-main-page-title {
+	font-size: 70px; /* Tamaño del título */
+	margin-bottom: 80px;
+}
+
+.modulos-main-page-text {
+	font-size: 30px; /* Tamaño del texto */
+}
+
+.modulos-main-page-image {
+	position: absolute;
+	top: 10px; /* Alineación en la parte superior */
+	right: 10px; /* Alineación en la parte derecha */
+	width: 160px; /* Ancho de la imagen */
+	height: auto; /* Altura automática para mantener la proporción */
+}

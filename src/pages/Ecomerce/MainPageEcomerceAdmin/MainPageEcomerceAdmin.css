@@ -1,0 +1,6 @@
+.botones-ecomerce-admin {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	width: 40%;
+}

@@ -1,0 +1,72 @@
+@import '../../../Assets/colors.css';
+@import '../../../Assets/tipografias.css';
+
+/* Login.css */
+
+/* Estilos para el contenedor principal */
+.login-container {
+	background-color: var(--color-piel);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.left-side {
+	flex: 1; /* Abarca todo el espacio disponible */
+	max-height: 100vh;
+	overflow-y: hidden; /* Oculta el scroll vertical */
+}
+.left-side img {
+	width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+	height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+}
+/* Estilos para el lado derecho con fondo moradito */
+.right-side {
+	padding: 20px;
+	border-radius: 10px;
+}
+
+/* Estilos para el login box */
+.login-box {
+	background-color: var(--color-moradito);
+	text-align: center;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	width: 400px;
+}
+
+/*Para cambiarle el estilo a los h3*/
+.subtitulo-logins {
+	color: var(--color-blanco);
+	font-size: 24px;
+}
+
+/*Para recuperar contra y registarse */
+.opciones-login {
+	margin-left: 10%;
+	margin-right: 10%;
+
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 60px;
+	margin-top: 15px;
+}
+
+.opciones-login a {
+	color: var(--color-blanco);
+	font-size: 16px;
+	text-decoration: underline;
+}
+
+/* Estilos para la imagen de Instagram */
+.instagram-icon {
+	position: absolute; /* Coloca la imagen en una posición absoluta */
+	bottom: 10px; /* Alinea la imagen a la parte inferior */
+	right: 10px; /* Alinea la imagen a la derecha */
+}
+
+.instagram-icon img {
+	width: 50px; /* Ajusta el tamaño de la imagen según tus preferencias */
+	height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+}

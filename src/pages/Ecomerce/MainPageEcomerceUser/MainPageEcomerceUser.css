@@ -1,0 +1,41 @@
+.productos-container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	align-items: center;
+	margin: 30px;
+	min-height: 100vh;
+}
+.MainPageEcomerce-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	background-color: var(--color-piel);
+}
+
+.filtros-boton-container {
+	width: 100%;
+	display: flex;
+}
+
+/* Agrega estos estilos a tu archivo de estilos CSS */
+.filtros-boton-container select {
+	border: none;
+	border-bottom: 2px solid #000; /* Color del borde inferior */
+	background-color: transparent;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Playfair Display', serif; /* Asegúrate de especificar la fuente deseada */
+	margin-left: 10vh;
+	outline: none; /* Quita el contorno */
+	margin-right: 31%;
+}
+.filtros-boton-container button {
+	margin-bottom: 0px;
+}
+.botones-ecomerce-admin {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}

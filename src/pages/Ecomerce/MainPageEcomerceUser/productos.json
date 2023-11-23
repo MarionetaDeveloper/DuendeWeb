@@ -1,0 +1,47 @@
+[
+	{
+		"imagen": "C:/Users/mario/Documents/GitHub/DuendeWeb/duende-pagina-web/src/Imagenes/Aretes.png",
+		"subtitulo": "Producto 1",
+		"precio": 20.99,
+		"categoria": "Categoría 1",
+		"cantidadDisponible": 50,
+		"estado": "Disponible",
+		"descripcion": "Este es el producto 1. Descripción del producto 1."
+	},
+	{
+		"imagen": "C:/Users/mario/Documents/GitHub/DuendeWeb/duende-pagina-web/src/Imagenes/Aretes.png",
+		"subtitulo": "Producto 2",
+		"precio": 15.49,
+		"categoria": "Categoría 2",
+		"cantidadDisponible": 30,
+		"estado": "Disponible",
+		"descripcion": "Este es el producto 2. Descripción del producto 2."
+	},
+	{
+		"imagen": "C:/Users/mario/Documents/GitHub/DuendeWeb/duende-pagina-web/src/Imagenes/Aretes.png",
+		"subtitulo": "Producto 3",
+		"precio": 30.99,
+		"categoria": "Categoría 1",
+		"cantidadDisponible": 20,
+		"estado": "Agotado",
+		"descripcion": "Este es el producto 3. Descripción del producto 3."
+	},
+	{
+		"imagen": "C:/Users/mario/Documents/GitHub/DuendeWeb/duende-pagina-web/src/Imagenes/Aretes.png",
+		"subtitulo": "Producto 4",
+		"precio": 25.99,
+		"categoria": "Categoría 3",
+		"cantidadDisponible": 10,
+		"estado": "Disponible",
+		"descripcion": "Este es el producto 4. Descripción del producto 4."
+	},
+	{
+		"imagen": "C:/Users/mario/Documents/GitHub/DuendeWeb/duende-pagina-web/src/Imagenes/Aretes.png",
+		"subtitulo": "Producto 5",
+		"precio": 12.99,
+		"categoria": "Categoría 2",
+		"cantidadDisponible": 5,
+		"estado": "Disponible",
+		"descripcion": "Este es el producto 5. Descripción del producto 5."
+	}
+]

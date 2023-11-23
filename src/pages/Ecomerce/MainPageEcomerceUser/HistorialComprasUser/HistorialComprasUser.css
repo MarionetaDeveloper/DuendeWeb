@@ -1,0 +1,47 @@
+/* HistorialComprasUser.css */
+
+/* Estilos generales */
+.container-historial {
+	background-color: var(--color-piel);
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+}
+
+/* Estilos para la tabla de compras */
+.historial-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	font-size: 25px;
+}
+
+.historial-table th,
+.historial-table td {
+	padding: 30px;
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+}
+
+.historial-table th {
+	background-color: var(--color-piel);
+	color: black;
+}
+
+.historial-table td {
+	color: white;
+	background-color: var(--color-morado-oscuro);
+	border-bottom: 10px solid var(--color-piel);
+}
+
+td.nota-casilla {
+	background-color: var(--color-morado-oscuro);
+	border-radius: 0 20px 20px 0;
+}
+
+td.id-casilla {
+	background-color: var(--color-morado-oscuro);
+	border-radius: 20px 0px 0px 20px;
+}

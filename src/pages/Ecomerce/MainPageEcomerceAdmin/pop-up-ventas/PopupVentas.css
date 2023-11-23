@@ -1,0 +1,29 @@
+/* Agrega estos estilos en tu archivo CSS */
+.popup-container-historial input {
+	background-color: var(--color-morado-oscuro); /* Fondo negro */
+	color: white; /* Texto blanco */
+	border: 3px solid white; /* Borde blanco */
+	padding: 5px; /* Espaciado interior */
+	margin: 5px 0; /* Espaciado exterior superior e inferior */
+	height: 100px;
+	border-radius: 20px;
+	font-family: 'Playfair Display', serif; /* Asegúrate de especificar la fuente deseada */
+	width: 300px;
+	outline: none;
+}
+
+/* Estilos adicionales para el estado */
+.popup-container-historial select {
+	width: 100%; /* Asegura que el select ocupe todo el ancho disponible */
+}
+.popup-container-historial select {
+	background-color: black; /* Fondo negro */
+	color: white; /* Texto blanco */
+	border: 3px solid white; /* Borde blanco */
+	padding: 5px; /* Espaciado interior */
+	margin: 5px 0; /* Espaciado exterior superior e inferior */
+	outline: none;
+	height: 60px;
+	font-size: 20px;
+	font-family: 'Playfair Display', serif; /* Asegúrate de especificar la fuente deseada */
+}
