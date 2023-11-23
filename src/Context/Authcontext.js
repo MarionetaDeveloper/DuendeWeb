@@ -2,8 +2,8 @@ import { createContext, useState, useContext, useEffect } from 'react';
 import { handleRegister } from '../pages/GestionUsuarios/Register/Register.js';
 import { handleLogin } from '../pages/GestionUsuarios/Login/Login.js';
 import Cookies from 'js-cookie';
-export const AuthContext = createContext();
 import { verifyTokenRequest } from '../api/auth.js';
+export const AuthContext = createContext();
 export const useAuth = () => {
 	const context = useContext(AuthContext);
 	if (!context) {
