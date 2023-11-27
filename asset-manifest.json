@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.b15aac9b.css",
-    "main.js": "/react-gh-pages/static/js/main.3998e365.js",
-    "static/js/787.2132b845.chunk.js": "/react-gh-pages/static/js/787.2132b845.chunk.js",
-    "static/media/Acerca-de-nosotros.png": "/react-gh-pages/static/media/Acerca-de-nosotros.a0efa1144ed35765f111.png",
-    "static/media/Fondo-Login.png": "/react-gh-pages/static/media/Fondo-Login.c958755da7204c480410.png",
-    "static/media/Aretes.png": "/react-gh-pages/static/media/Aretes.6935a055fa064c6b11c2.png",
-    "static/media/antifaz.jpg": "/react-gh-pages/static/media/antifaz.ca979f56a5d50cf7f143.jpg",
-    "static/media/make-up.png": "/react-gh-pages/static/media/make-up.bf5f3f54d85135ba6aec.png",
-    "static/media/Logo-Duende.png": "/react-gh-pages/static/media/Logo-Duende.d7859b1da37ae5dac67c.png",
-    "index.html": "/react-gh-pages/index.html",
-    "main.b15aac9b.css.map": "/react-gh-pages/static/css/main.b15aac9b.css.map",
-    "main.3998e365.js.map": "/react-gh-pages/static/js/main.3998e365.js.map",
-    "787.2132b845.chunk.js.map": "/react-gh-pages/static/js/787.2132b845.chunk.js.map"
+    "main.css": "/DuendeWeb/static/css/main.7f38b8b5.css",
+    "main.js": "/DuendeWeb/static/js/main.5ed4b5da.js",
+    "static/js/787.2132b845.chunk.js": "/DuendeWeb/static/js/787.2132b845.chunk.js",
+    "static/media/Acerca-de-nosotros.png": "/DuendeWeb/static/media/Acerca-de-nosotros.a0efa1144ed35765f111.png",
+    "static/media/Fondo-Login.png": "/DuendeWeb/static/media/Fondo-Login.c958755da7204c480410.png",
+    "static/media/Aretes.png": "/DuendeWeb/static/media/Aretes.6935a055fa064c6b11c2.png",
+    "static/media/antifaz.jpg": "/DuendeWeb/static/media/antifaz.ca979f56a5d50cf7f143.jpg",
+    "static/media/make-up.png": "/DuendeWeb/static/media/make-up.bf5f3f54d85135ba6aec.png",
+    "static/media/Logo-Duende.png": "/DuendeWeb/static/media/Logo-Duende.d7859b1da37ae5dac67c.png",
+    "index.html": "/DuendeWeb/index.html",
+    "main.7f38b8b5.css.map": "/DuendeWeb/static/css/main.7f38b8b5.css.map",
+    "main.5ed4b5da.js.map": "/DuendeWeb/static/js/main.5ed4b5da.js.map",
+    "787.2132b845.chunk.js.map": "/DuendeWeb/static/js/787.2132b845.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b15aac9b.css",
-    "static/js/main.3998e365.js"
+    "static/css/main.7f38b8b5.css",
+    "static/js/main.5ed4b5da.js"
   ]
 }
