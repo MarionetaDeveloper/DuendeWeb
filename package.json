@@ -1,7 +1,7 @@
 {
   "name": "nombre-del-proyecto",
   "version": "0.1.0",
-  "homepage": "https://gitname.github.io/react-gh-pages",
+  "homepage": "https://marionetadeveloper.github.io/DuendeWeb",
   "private": true,
   "dependencies": {
     "@syncfusion/ej2": "^23.2.4",
@@ -65,7 +65,6 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
-    "gh-pages": "^6.1.0",
     "prettier": "^3.0.3"
   }
 }
