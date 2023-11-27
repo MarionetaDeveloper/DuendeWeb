@@ -38,7 +38,8 @@ function MainPageEcomerceUser() {
         async function fetchProducts() {
             try {
                 const response = await axios.get('http://localhost:3500/product');
-                setProducts(response.data);
+                console.log('Products:', response.data);
+				setProducts(response.data);
             } catch (error) {
                 console.error('Error fetching products:', error);
             }

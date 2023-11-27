@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     node: true,
     es2021: true,
+    node: true,
   },
   extends: ["eslint:recommended", "plugin:react/recommended"],
   overrides: [
@@ -28,6 +29,5 @@ module.exports = {
     "no-mixed-spaces-and-tabs": "off",
     "react/no-unescaped-entities": "off",
     "no-unused-vars": "warn",
-    "no-restricted-globals": "off",
   },
 };

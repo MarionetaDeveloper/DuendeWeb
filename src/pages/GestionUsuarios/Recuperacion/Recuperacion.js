@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import '../Login/Login.css'; // Asegúrate de tener un archivo CSS para estilizar este componente
 import IconButton from '../../../Components/Buttons/Button.js'; // Asegúrate de proporcionar la ruta correcta al archivo de tu componente IconButton
 import Fondo from '../../../Imagenes/Fondo-Login.png';
@@ -6,20 +6,22 @@ import instagram from '../../../Imagenes/instagram.png';
 import axios from 'axios';
 
 function Recuperacion() {
+	const [email, setEmail] = useState(''); // Inicializa el estado del correo electrónico
 
-	const [email,setEmail] = useState(''); // Inicializa el estado del correo electrónico
-
-	const handleRecovery =  async () => {
+	const handleRecovery = async () => {
 		event.preventDefault();
 		try {
-            // Send a POST request to your backend endpoint for password recovery
-            const response = await axios.put('http://localhost:3500/login/updatePassword', { email });
-            // Log the response for now, you might want to show a success message to the user
-            console.log(response.data);
-        } catch (error) {
-            console.error(error);
-            // Handle error, maybe show an error message to the user
-        }
+			// Send a POST request to your backend endpoint for password recovery
+			const response = await axios.put(
+				'http://localhost:3500/login/updatePassword',
+				{ email },
+			);
+			// Log the response for now, you might want to show a success message to the user
+			console.log(response.data);
+		} catch (error) {
+			console.error(error);
+			// Handle error, maybe show an error message to the user
+		}
 	};
 
 	return (
@@ -34,14 +36,14 @@ function Recuperacion() {
 					<form>
 						<div className='form-login'>
 							<h3 className='subtitulo-logins'>Correo Electrónico</h3>
-							<input 
-                                type='email' 
-                                id='correo' 
-                                name='correo' 
-                                required 
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                            />
+							<input
+								type='email'
+								id='correo'
+								name='correo'
+								required
+								value={email}
+								onChange={e => setEmail(e.target.value)}
+							/>
 						</div>
 						<IconButton
 							buttonText='Enviar'
@@ -52,8 +54,13 @@ function Recuperacion() {
 					</form>
 				</div>
 				<div className='instagram-icon'>
-					{/* Aquí puedes colocar el icono de Instagram o el contenido deseado */}
-					<img src={instagram} alt='Icono de Instagram' />
+					<a
+						href='https://www.instagram.com/duenderfs'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<img src={instagram} alt='Icono de Instagram' />
+					</a>
 				</div>
 			</div>
 		</div>

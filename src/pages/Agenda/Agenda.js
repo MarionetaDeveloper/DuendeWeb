@@ -17,73 +17,52 @@ import {
 } from '@syncfusion/ej2-react-schedule';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
+
 import { registerLicense } from '@syncfusion/ej2-base';
-import { L10n } from '@syncfusion/ej2-base';
+import axios from 'axios';
 
 registerLicense(
 	'Ngo9BigBOggjHTQxAR8/V1NHaF5cWWdCf1FpRGRGfV5yd0VHYlZQRHxeSk0SNHVRdkdgWH5fd3RVR2FYVkx2Vko=',
 );
 
-L10n.load({
-	'en-US': {
-		schedule: {
-			saveButton: 'Guardar',
-			cancelButton: 'Cerrar',
-			deleteButton: 'Eliminar',
-			newEvent: 'Añadir Evento',
-		},
-	},
-});
 const Scheduler = () => {
-	// create const use state event type and setEventType
-
 	const [eventTypes, setEventTypes] = useState({});
+	const [shouldFetchData, setShouldFetchData] = useState(true);
+	const [localData, setLocalData] = useState([]);
+	const fetchData = async () => {
+		try {
+			const response = await axios.get(
+				'http://localhost:3500/appointments/getAll',
+			);
+			if (Array.isArray(response.data)) {
+				setLocalData(response.data);
+			} else {
+				console.error(
+					'La respuesta de la API no es un arreglo:',
+					response.data,
+				);
+			}
+		} catch (error) {
+			console.error('Error al obtener datos de la API:', error);
+		}
+	};
 
-	const [localData, setLocalData] = useState([
-		{
-			Id: 1,
-			Subject: 'plug de tierrosa',
-			EventType: 'Entrega',
-			StartTime: new Date(2023, 10, 17, 6, 0),
-			EndTime: new Date(2023, 10, 17, 7, 0),
-			Details: 'Chepe Centro',
-			CustomerName: 'Naho',
-			ReferenceImage: '/Naho',
-			OrderNumber: '12',
-			DeliveryCustomerName: 'Naho bo',
-		},
-		{
-			Id: 2,
-			Subject: 'Maquillaje de Tierrosa',
-			EventType: 'Cita',
-			StartTime: new Date(2023, 10, 16, 6, 0),
-			EndTime: new Date(2023, 10, 16, 7, 0),
-			Details: 'Chepe Centro',
-			CustomerName: 'Juan',
-			ReferenceImage: '/mario',
-			OrderNumber: '123',
-			DeliveryCustomerName: 'Marioneta',
-		},
-	]);
-
-	// initialize eventTypes with initial event types from localData
 	useEffect(() => {
-		const initialEventTypes = {};
-		localData.forEach(event => {
-			initialEventTypes[event.Id] = event.EventType || 'Otro';
-		});
-		setEventTypes(initialEventTypes);
-	}, [localData]);
+		if (shouldFetchData) {
+			fetchData();
+			setShouldFetchData(false); // Resetear el estado después de la carga de datos
+		}
+	}, [shouldFetchData]);
 
 	const fieldsData = {
 		id: 'Id',
-		subject: { name: 'Subject', validation: { required: true } },
-		type: { name: 'EventType', validation: { required: true } },
-		details: { name: 'Details', validation: { required: true } },
-		startTime: { name: 'StartTime', validation: { required: true } },
-		endTime: { name: 'EndTime', validation: { required: true } },
+		Subject: { name: 'Subject', validation: { required: true } },
+		EventType: { name: 'EventType', validation: { required: true } },
+		Details: { name: 'Details', validation: { required: true } },
+		StartTime: { name: 'StartTime', validation: { required: true } },
+		EendTime: { name: 'EndTime', validation: { required: true } },
 		CustomerName: { name: 'CustomerName' },
-		ReferenceImage: { name: 'ReferenceImage' },
+		ReferenceService: { name: 'ReferenceService' },
 		OrderNumber: { name: 'OrderNumber' },
 		DeliveryCustomerName: { name: 'DeliveryCustomerName' },
 	};
@@ -96,9 +75,149 @@ const Scheduler = () => {
 		//args.scroll = { enabled: false };
 		args.interval = 10;
 	};
+
+	const handleActionBegin = async args => {
+		if (
+			!['eventCreate', 'eventChange', 'eventRemove'].includes(args.requestType)
+		) {
+			setShouldFetchData(true);
+			return;
+		}
+		const eventData =
+			args.data && args.data instanceof Array ? args.data[0] : args.data;
+
+		if (!eventData) {
+			console.error('No se encontraron datos de evento.');
+			setShouldFetchData(true);
+			return;
+		}
+		console.log('EventData:', eventData);
+
+		// Verificar superposición para eventos nuevos o modificados
+		if (
+			args.requestType === 'eventCreate' ||
+			args.requestType === 'eventChange'
+		) {
+			const { StartTime, EndTime, Id } = eventData;
+
+			const inicio = new Date(StartTime);
+			const fin = new Date(EndTime);
+
+			// Función para verificar si un evento se superpone con otros eventos
+			const esEventoSuperpuesto = (inicio, fin, idEvento = null, _id) => {
+				const superposicion = localData.some(evento => {
+					if (idEvento !== evento.Id) {
+						if (evento._id === _id) {
+							return false;
+						}
+						// Ignorar el evento actual si se está editando
+						const inicioEvento = new Date(evento.StartTime);
+						const finEvento = new Date(evento.EndTime);
+
+						const seSuperpone = inicio < finEvento && fin > inicioEvento;
+
+						return seSuperpone;
+					}
+
+					return false;
+				});
+
+				return superposicion;
+			};
+
+			// Verificar si el evento actual se superpone con otros
+			const eventoSuperpuesto = esEventoSuperpuesto(
+				inicio,
+				fin,
+				Id,
+				eventData._id,
+			);
+
+			if (eventoSuperpuesto) {
+				const esCita = eventData.EventType === 'Cita';
+
+				// Verificar si alguno de los eventos superpuestos es de tipo "Cita"
+				const superposicionConCita = localData.some(evento => {
+					return (
+						evento.EventType === 'Cita' &&
+						((inicio < new Date(evento.EndTime) &&
+							fin > new Date(evento.StartTime)) ||
+							(inicio <= new Date(evento.StartTime) &&
+								fin >= new Date(evento.EndTime)))
+					);
+				});
+
+				if (esCita || superposicionConCita) {
+					alert('No se pueden superponer eventos con citas.');
+					args.cancel = true;
+					return;
+				}
+
+				// Si no es una cita pero hay superposición con otros tipos de eventos, pedir confirmación
+				if (
+					!window.confirm(
+						'Hay una colisión con otro evento. ¿Deseas continuar?',
+					)
+				) {
+					args.cancel = true;
+					return;
+				}
+			}
+		}
+
+		const isUpdate = eventData._id != null;
+		const apiEndpoint = isUpdate ? '/update' : '/create';
+
+		if (
+			args.requestType === 'eventCreate' ||
+			args.requestType === 'eventChange'
+		) {
+			args.cancel = true;
+
+			try {
+				const response = await axios({
+					method: isUpdate ? 'put' : 'post',
+					url: `http://localhost:3500/appointments${apiEndpoint}`,
+					data: eventData,
+				});
+
+				console.log('API response for save', response); // Para depuración
+				setShouldFetchData(true);
+			} catch (error) {
+				console.error('Error al guardar los datos del evento:', error);
+				console.log('Error data', error.response || error.message);
+			}
+		} else if (args.requestType === 'eventRemove') {
+			args.cancel = true;
+			const eventId = eventData._id;
+			console.log('event id ', eventId);
+
+			if (!eventId) {
+				console.error('No se pudo obtener el ID del evento para eliminar.');
+				return;
+			}
+
+			try {
+				const response = await axios.delete(
+					'http://localhost:3500/appointments/delete',
+					{
+						data: { id: eventId },
+					},
+				);
+
+				console.log('API response for delete', response); // Para depuración
+
+				setShouldFetchData(true);
+			} catch (error) {
+				console.error('Error al eliminar el evento:', error);
+				console.log('Error data', error.response || error.message); // Para depuración
+			}
+		}
+	};
+
 	const Cita = props => {
-		console.log('Cita props', props);
-		console.log(Object.keys(props).length);
+		//console.log('Cita props', props);
+		//console.log(Object.keys(props).length);
 
 		return (
 			<table className='custom-event-editor'>
@@ -151,11 +270,11 @@ const Scheduler = () => {
 					</tr>
 
 					<tr>
-						<td className='e-textlabel'>Imagen de Referencia</td>
+						<td className='e-textlabel'>Servicio</td>
 						<td>
 							<input
-								id='ReferenceImage'
-								name='ReferenceImage'
+								id='ReferenceService'
+								name='ReferenceService'
 								type='text' // Puedes cambiar esto según tus necesidades
 								className='e-field e-input'
 							/>
@@ -189,7 +308,7 @@ const Scheduler = () => {
 					<tr>
 						<td className='e-textlabel'>Detalles</td>
 						<td>
-							<input
+							<textarea
 								id='Details'
 								name='Details'
 								type='text'
@@ -202,8 +321,8 @@ const Scheduler = () => {
 		);
 	};
 	const Entrega = props => {
-		console.log('Entrega props', props);
-		console.log(Object.keys(props).length);
+		//console.log('Entrega props', props);
+		//console.log(Object.keys(props).length);
 
 		return (
 			<table className='custom-event-editor'>
@@ -294,7 +413,7 @@ const Scheduler = () => {
 					<tr>
 						<td className='e-textlabel'>Detalles</td>
 						<td>
-							<input
+							<textarea
 								id='Details'
 								name='Details'
 								type='text'
@@ -307,8 +426,8 @@ const Scheduler = () => {
 		);
 	};
 	const Otra = props => {
-		console.log('Otra props', props);
-		console.log(Object.keys(props).length);
+		//console.log('Otra props', props);
+		//console.log(Object.keys(props).length);
 		return (
 			<table className='custom-event-editor'>
 				<tbody>
@@ -374,7 +493,7 @@ const Scheduler = () => {
 					<tr>
 						<td className='e-textlabel'>Detalles</td>
 						<td>
-							<input
+							<textarea
 								id='Details'
 								name='Details'
 								type='text'
@@ -402,7 +521,6 @@ const Scheduler = () => {
 				currentView='Month'
 				eventSettings={{
 					dataSource: localData,
-					//template: this.eventTemplate.bind(this),
 					fields: fieldsData,
 				}}
 				dragStart={onDragStart}
@@ -434,6 +552,7 @@ const Scheduler = () => {
 					props.element.style.border = `1px solid ${color.replace('0.3', '1')}`; // Borde con opacidad completa
 					props.element.style.color = 'black';
 				}}
+				actionBegin={handleActionBegin} // Añade el manejador de acción aquí
 			>
 				<ViewsDirective>
 					<ViewDirective

@@ -1,0 +1,53 @@
+/* NotificationCenter.css */
+.notification-center {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff; /* or any color that matches your nav bar */
+}
+
+.dropdown-content {
+    position: absolute;
+    right: 0;
+    top: 30px; /* Adjust as necessary */
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 4px;
+    padding: 5px 0;
+}
+
+.notification-item {
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+}
+
+.notification-item:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.notification-item h4 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.notification-item p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.notification-item span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.7rem;
+    color: #888;
+}

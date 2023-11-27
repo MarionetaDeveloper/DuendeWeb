@@ -167,8 +167,13 @@ function Registro() {
 					</form>
 				</div>
 				<div className='instagram-icon'>
-					{/* Aquí puedes colocar el icono de Instagram o el contenido deseado */}
-					<img src={instagram} alt='Icono de Instagram' />
+					<a
+						href='https://www.instagram.com/duenderfs'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<img src={instagram} alt='Icono de Instagram' />
+					</a>
 				</div>
 			</div>
 		</div>

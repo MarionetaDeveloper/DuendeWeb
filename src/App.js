@@ -44,7 +44,6 @@ function App() {
 							<Route path='/Recovery' element={<Recuperacion />} />
 							<Route path='/Login' element={<Login />} />
 							<Route path='/Register' element={<Register />} />
-							<Route path='/Agenda' element={<Scheduler />} />
 
 							<Route element={<ProtectedRoute />}>
 								<Route path='/MainPageUser' element={<MainPageUser />} />
@@ -71,7 +70,7 @@ function App() {
 								{/*Administrador*/}
 								<Route path='/GalleryAdmin' element={<GalleryAdmin />} />
 								<Route path='/CuentaAdmin' element={<CuentaAdmin />} />
-
+								<Route path='/Agenda' element={<Scheduler />} />
 								<Route path='/MainPageAdmin' element={<MainPageAdmin />} />
 								<Route
 									path='/MainPageEcomerceAdmin'

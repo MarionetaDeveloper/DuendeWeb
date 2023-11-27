@@ -3,6 +3,7 @@ import ModulosMainPage from '../../../Components/ModulosMainPage/ModulosMainPage
 import Duende from '../../../Imagenes/Acerca-de-nosotros.png';
 import './MainPageUser.css';
 import NavBar from '../../../Components/NavBar/NavBar';
+import NotificationCenter  from '../../../Components/Notifications/NotificationCenter.js';
 import Footer from '../../../Components/Footer/Footer';
 import Curso from '../../../Imagenes/graduation.png';
 import CarritoG from '../../../Imagenes/shopping-cart.png';

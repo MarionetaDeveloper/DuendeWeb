@@ -63,7 +63,7 @@ function MainPageAdmin() {
 						title='Agenda Duende'
 						text='La Agenda Duende Ayudará a organizarte de manera efectiva. Ya sea que necesites registrar tus cursos, entregas o simplemente mantenerte al tanto de tus compromisos diarios, nuestra Agenda Duende es la herramienta perfecta para ti. Te ayudará a mantenerte al día con tus tareas y actividades.'
 						imageUrl={agenda}
-						linkTo='/MainPageAdmin'
+						linkTo='/Agenda'
 					/>
 				</div>
 			</section>

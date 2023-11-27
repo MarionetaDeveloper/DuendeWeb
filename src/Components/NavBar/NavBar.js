@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 import { useAuth } from '../../Context/Authcontext.js';
+import NotificationCenter from '../Notifications/NotificationCenter.js';
 
 function NavBar(props) {
 	const pathTienda = props.pathTienda;
@@ -60,6 +61,9 @@ function NavBar(props) {
 								</Link>
 							</li>
 						)}
+						<li className='nav-item'>
+							<NotificationCenter /> 
+						</li>
 					</ul>
 				</div>
 			</div>
